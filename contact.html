@@ -5,19 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>Contact Rahul - Chess Coaching Mumbai | ChessWithRahul</title>
-    <meta name="title" content="Contact Rahul - Chess Coaching Mumbai | ChessWithRahul">
-    <meta name="description" content="Get in touch with Rahul for personal chess coaching in Mumbai. WhatsApp, email, or call to book your free trial session. Quick response guaranteed.">
-    <meta name="keywords" content="contact chess coach Mumbai, book chess lessons, chess coaching contact, WhatsApp chess coach">
+    <title>Contact Rahul - Chess Coach Mumbai | Book Free Trial | ChessWithRahul</title>
+    <meta name="title" content="Contact Rahul - Chess Coach Mumbai | Book Free Trial | ChessWithRahul">
+    <meta name="description" content="Get in touch with Rahul for personal chess coaching in Mumbai. WhatsApp +91-8591028709, email, or book your free trial session. Quick response guaranteed. Available 9 AM - 9 PM daily.">
+    <meta name="keywords" content="contact chess coach Mumbai, book chess lessons, chess coaching contact, WhatsApp chess coach, schedule chess session Mumbai">
     <meta name="author" content="Rahul - ChessWithRahul">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://chesswithrahul.in/contact.html">
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chesswithrahul.in/contact.html">
+    <meta property="og:title" content="Contact Rahul - Chess Coach Mumbai | Book Free Trial">
+    <meta property="og:description" content="Get in touch for personal chess coaching in Mumbai. Quick response guaranteed.">
+    <meta property="og:image" content="https://chesswithrahul.in/images/rahul-coach.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chesswithrahul.in/contact.html">
+    <meta property="twitter:title" content="Contact Rahul - Chess Coach Mumbai">
+    <meta property="twitter:description" content="Book your free trial chess session today.">
+    <meta property="twitter:image" content="https://chesswithrahul.in/images/rahul-coach.webp">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/favicon.ico">
     
-    <!-- Stylesheet -->
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://wa.me">
+    <link rel="preconnect" href="https://formspree.io">
     
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
@@ -40,12 +60,38 @@
       ]
     }
     </script>
+
+    <!-- ContactPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "LocalBusiness",
+        "name": "ChessWithRahul",
+        "telephone": "+91-8591028709",
+        "email": "contact@chesswithrahul.in",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mumbai",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
     
     <!-- Header with Navigation -->
-    <header class="header">
-        <nav class="navbar">
+    <header class="header" id="header">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="container">
                 <div class="nav-wrapper">
                     <div class="logo">
@@ -54,7 +100,7 @@
                         </a>
                     </div>
                     
-                    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
@@ -64,7 +110,7 @@
                         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="about.html" class="nav-link">About Rahul</a></li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle">Coaching Programs</a>
+                            <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Coaching Programs</a>
                             <ul class="dropdown-menu">
                                 <li><a href="beginner-chess.html" class="dropdown-link">Beginner Chess</a></li>
                                 <li><a href="kids-chess.html" class="dropdown-link">Kids Chess Classes</a></li>
@@ -76,7 +122,7 @@
                         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
                         <li class="nav-item nav-cta">
-                            <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20book%20a%20free%20trial%20chess%20class" class="btn-primary" target="_blank" rel="noopener">Book Free Trial</a>
+                            <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20book%20a%20free%20trial%20chess%20class" class="btn-primary" target="_blank" rel="noopener noreferrer">Book Free Trial</a>
                         </li>
                     </ul>
                 </div>
@@ -88,142 +134,160 @@
     <section class="page-header">
         <div class="container">
             <h1>Get in Touch</h1>
-            <p class="page-subtitle">Ready to start your chess journey? Contact me today for a free trial session</p>
+            <p class="page-subtitle">Ready to start your chess journey? Contact me today for a free trial session. Quick response guaranteed!</p>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-main">
+    <!-- Contact Main Section -->
+    <section style="padding: 4rem 0; background-color: var(--white);">
         <div class="container">
-            <div class="contact-grid">
-                <!-- Contact Information -->
-                <div class="contact-info">
-                    <h2>Contact Information</h2>
-                    <p>I'm here to answer your questions and help you start your chess journey. Reach out through any of these methods:</p>
+            <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start;">
+                
+                <!-- Contact Information Column -->
+                <div>
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Contact Information</h2>
+                    <p style="margin-bottom: 2rem; color: var(--gray-700); line-height: 1.7;">I'm here to answer your questions and help you start your chess journey. Reach out through any of these methods and I'll respond quickly.</p>
                     
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="method-icon">📱</div>
-                            <h3>WhatsApp (Fastest Response)</h3>
-                            <p><a href="https://wa.me/918591028709" target="_blank" rel="noopener">+91 8591028709</a></p>
-                            <p class="method-note">Click to open WhatsApp chat instantly</p>
+                    <!-- Contact Methods -->
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        
+                        <!-- WhatsApp -->
+                        <div style="background: linear-gradient(135deg, var(--whatsapp) 0%, var(--whatsapp-dark) 100%); padding: 1.5rem; border-radius: var(--radius-lg); color: var(--white);">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📱</div>
+                            <h3 style="color: var(--white); margin-bottom: 0.5rem;">WhatsApp (Fastest Response)</h3>
+                            <p style="margin-bottom: 0.75rem; color: rgba(255,255,255,0.9);"><a href="https://wa.me/918591028709" target="_blank" rel="noopener noreferrer" style="color: var(--white); font-weight: 700; font-size: var(--text-lg);">+91 8591028709</a></p>
+                            <p style="font-size: var(--text-sm); color: rgba(255,255,255,0.85); margin: 0;">Click to open WhatsApp chat instantly</p>
                         </div>
                         
-                        <div class="contact-method">
-                            <div class="method-icon">📞</div>
-                            <h3>Phone / Call</h3>
-                            <p><a href="tel:+918591028709">+91 8591028709</a></p>
-                            <p class="method-note">Available Mon-Sun, 9 AM - 9 PM IST</p>
+                        <!-- Phone -->
+                        <div style="background-color: var(--gray-50); padding: 1.5rem; border-radius: var(--radius-lg); border-left: 4px solid var(--primary-color);">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📞</div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Phone / Call</h3>
+                            <p style="margin-bottom: 0.75rem;"><a href="tel:+918591028709" style="color: var(--primary-color); font-weight: 700; font-size: var(--text-lg);">+91 8591028709</a></p>
+                            <p style="font-size: var(--text-sm); color: var(--gray-600); margin: 0;">Available Mon-Sun, 9 AM - 9 PM IST</p>
                         </div>
                         
-                        <div class="contact-method">
-                            <div class="method-icon">📧</div>
-                            <h3>Email</h3>
-                            <p><a href="mailto:contact@chesswithrahul.in">contact@chesswithrahul.in</a></p>
-                            <p class="method-note">Response within 24 hours</p>
+                        <!-- Email -->
+                        <div style="background-color: var(--gray-50); padding: 1.5rem; border-radius: var(--radius-lg); border-left: 4px solid var(--primary-color);">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📧</div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Email</h3>
+                            <p style="margin-bottom: 0.75rem;"><a href="mailto:contact@chesswithrahul.in" style="color: var(--primary-color); font-weight: 700;">contact@chesswithrahul.in</a></p>
+                            <p style="font-size: var(--text-sm); color: var(--gray-600); margin: 0;">Response within 24 hours</p>
                         </div>
                         
-                        <div class="contact-method">
-                            <div class="method-icon">📍</div>
-                            <h3>Location</h3>
-                            <p>Mumbai, Maharashtra, India</p>
-                            <p class="method-note">Online sessions available worldwide</p>
+                        <!-- Location -->
+                        <div style="background-color: var(--gray-50); padding: 1.5rem; border-radius: var(--radius-lg); border-left: 4px solid var(--primary-color);">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📍</div>
+                            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Location</h3>
+                            <p style="margin-bottom: 0.75rem; font-weight: 600;">Mumbai, Maharashtra, India</p>
+                            <p style="font-size: var(--text-sm); color: var(--gray-600); margin: 0;">Online sessions available worldwide</p>
                         </div>
                     </div>
                     
-                    <div class="quick-contact-box">
-                        <h3>Quick Contact via WhatsApp</h3>
-                        <p>Choose what you'd like to discuss:</p>
-                        <div class="whatsapp-buttons">
-                            <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20book%20a%20free%20trial%20chess%20class" class="wa-btn" target="_blank" rel="noopener">Book Free Trial</a>
-                            <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20have%20questions%20about%20chess%20coaching" class="wa-btn" target="_blank" rel="noopener">Ask Questions</a>
-                            <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20know%20about%20pricing%20and%20packages" class="wa-btn" target="_blank" rel="noopener">Pricing Info</a>
-                            <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20schedule%20a%20session" class="wa-btn" target="_blank" rel="noopener">Schedule Session</a>
+                    <!-- Quick WhatsApp Buttons -->
+                    <div style="background: linear-gradient(135deg, var(--primary-lightest) 0%, var(--white) 100%); padding: 2rem; border-radius: var(--radius-xl); margin-top: 2rem; border: 2px solid var(--primary-color);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem; text-align: center;">Quick Contact via WhatsApp</h3>
+                        <p style="text-align: center; margin-bottom: 1.5rem; color: var(--gray-700);">Choose what you'd like to discuss:</p>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20book%20a%20free%20trial%20chess%20class" class="btn-primary" target="_blank" rel="noopener noreferrer" style="padding: 0.75rem; font-size: var(--text-sm); text-align: center;">Book Free Trial</a>
+                            <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20have%20questions%20about%20chess%20coaching" class="btn-outline" target="_blank" rel="noopener noreferrer" style="padding: 0.75rem; font-size: var(--text-sm); text-align: center;">Ask Questions</a>
+                            <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20know%20about%20pricing%20and%20packages" class="btn-outline" target="_blank" rel="noopener noreferrer" style="padding: 0.75rem; font-size: var(--text-sm); text-align: center;">Pricing Info</a>
+                            <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20schedule%20a%20session" class="btn-outline" target="_blank" rel="noopener noreferrer" style="padding: 0.75rem; font-size: var(--text-sm); text-align: center;">Schedule Session</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Contact Form (Optional - Simple version) -->
-                <div class="contact-form-wrapper">
-                    <h2>Send a Message</h2>
-                    <p>Prefer to send a message? Fill out this form and I'll get back to you soon.</p>
-                    
-                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your name">
+                <!-- Contact Form Column -->
+                <div>
+                    <div style="background-color: var(--gray-50); padding: 2.5rem; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
+                        <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Send a Message</h2>
+                        <p style="margin-bottom: 2rem; color: var(--gray-700);">Prefer to send a message? Fill out this form and I'll get back to you within 24 hours.</p>
+                        
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="name" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-700);">Your Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name" style="width: 100%; padding: 0.875rem; border: 2px solid var(--gray-300); border-radius: var(--radius-md); font-size: var(--text-base); font-family: var(--font-primary); transition: border-color 0.3s;">
+                            </div>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="email" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-700);">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com" style="width: 100%; padding: 0.875rem; border: 2px solid var(--gray-300); border-radius: var(--radius-md); font-size: var(--text-base); font-family: var(--font-primary); transition: border-color 0.3s;">
+                            </div>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="phone" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-700);">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" style="width: 100%; padding: 0.875rem; border: 2px solid var(--gray-300); border-radius: var(--radius-md); font-size: var(--text-base); font-family: var(--font-primary); transition: border-color 0.3s;">
+                            </div>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="interest" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-700);">I'm Interested In *</label>
+                                <select id="interest" name="interest" required style="width: 100%; padding: 0.875rem; border: 2px solid var(--gray-300); border-radius: var(--radius-md); font-size: var(--text-base); font-family: var(--font-primary); background-color: var(--white); transition: border-color 0.3s;">
+                                    <option value="">Select an option</option>
+                                    <option value="beginner">Beginner Chess Coaching</option>
+                                    <option value="kids">Kids Chess Classes (Ages 6-16)</option>
+                                    <option value="adult">Adult Chess Training</option>
+                                    <option value="senior">Senior Chess Training</option>
+                                    <option value="rating">1200 Elo Rating Training</option>
+                                    <option value="trial">Free Trial Session</option>
+                                    <option value="other">Other / General Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <label for="message" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-700);">Your Message *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your chess goals, current level, preferred schedule, or any questions you have..." style="width: 100%; padding: 0.875rem; border: 2px solid var(--gray-300); border-radius: var(--radius-md); font-size: var(--text-base); font-family: var(--font-primary); resize: vertical; transition: border-color 0.3s;"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary btn-large" style="width: 100%; cursor: pointer;">Send Message</button>
+                            
+                            <p style="margin-top: 1rem; text-align: center; font-size: var(--text-sm); color: var(--gray-600);">* Required fields. I typically respond within 24 hours.</p>
+                        </form>
+                        
+                        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--gray-300); text-align: center;">
+                            <p style="font-weight: 600; color: var(--gray-700);">Prefer instant response?</p>
+                            <p><a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20know%20more%20about%20chess%20coaching" target="_blank" rel="noopener noreferrer" style="color: var(--whatsapp); font-weight: 700;">Message me on WhatsApp</a> for immediate reply.</p>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="interest">I'm Interested In *</label>
-                            <select id="interest" name="interest" required>
-                                <option value="">Select an option</option>
-                                <option value="beginner">Beginner Chess Coaching</option>
-                                <option value="kids">Kids Chess Classes</option>
-                                <option value="adult">Adult Chess Training</option>
-                                <option value="senior">Senior Chess Training</option>
-                                <option value="rating">1200 Elo Rating Training</option>
-                                <option value="other">Other / General Inquiry</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your chess goals, current level, or any questions you have..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary btn-large">Send Message</button>
-                        
-                        <p class="form-note">* Required fields. I typically respond within 24 hours.</p>
-                    </form>
-                    
-                    <div class="form-alternative">
-                        <p><strong>Prefer instant response?</strong> <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20know%20more%20about%20chess%20coaching" target="_blank" rel="noopener">Message me on WhatsApp</a> for immediate reply.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Quick Links -->
-    <section class="contact-faq">
+    <!-- Quick Answers Section -->
+    <section style="padding: 4rem 0; background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);">
         <div class="container">
-            <h2>Quick Answers</h2>
-            <p>Looking for quick information? These might help:</p>
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1rem;">Quick Answers</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--gray-600);">Looking for quick information? These might help:</p>
             
-            <div class="quick-answers-grid">
-                <div class="quick-answer">
-                    <h3>💰 Pricing</h3>
-                    <p>₹800 per hour for personal 1-on-1 sessions. First trial is FREE.</p>
-                    <a href="faq.html#pricing">View Pricing FAQ →</a>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                
+                <div style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💰</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Pricing</h3>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">₹800 per hour for personal 1-on-1 sessions. First trial is FREE.</p>
+                    <a href="faq.html#pricing" style="color: var(--primary-color); font-weight: 600;">View Pricing FAQ →</a>
                 </div>
                 
-                <div class="quick-answer">
-                    <h3>📅 Scheduling</h3>
-                    <p>Flexible timing: mornings, evenings, weekends. Book via WhatsApp.</p>
-                    <a href="faq.html#scheduling">Scheduling Details →</a>
+                <div style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Scheduling</h3>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">Flexible timing: mornings, evenings, weekends. Book via WhatsApp.</p>
+                    <a href="faq.html#scheduling" style="color: var(--primary-color); font-weight: 600;">Scheduling Details →</a>
                 </div>
                 
-                <div class="quick-answer">
-                    <h3>🎓 Beginner Friendly</h3>
-                    <p>Zero knowledge needed. I teach from absolute basics.</p>
-                    <a href="beginner-chess.html">Beginner Program →</a>
+                <div style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Beginner Friendly</h3>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">Zero knowledge needed. I teach from absolute basics.</p>
+                    <a href="beginner-chess.html" style="color: var(--primary-color); font-weight: 600;">Beginner Program →</a>
                 </div>
                 
-                <div class="quick-answer">
-                    <h3>👶 Kids Classes</h3>
-                    <p>Ages 6-16 welcome. Fun, engaging teaching style.</p>
-                    <a href="kids-chess.html">Kids Programs →</a>
+                <div style="background-color: var(--white); padding: 2rem; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">👶</div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Kids Classes</h3>
+                    <p style="margin-bottom: 1rem; color: var(--gray-700);">Ages 6-16 welcome. Fun, engaging teaching style.</p>
+                    <a href="kids-chess.html" style="color: var(--primary-color); font-weight: 600;">Kids Programs →</a>
                 </div>
             </div>
         </div>
@@ -235,10 +299,10 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>ChessWithRahul</h4>
-                    <p>Personal chess coaching for beginners, kids, adults, and seniors. Learn from a multiple-time Inter-College Chess Champion.</p>
+                    <p>Personal chess coaching for beginners, kids, adults, and seniors in Mumbai. Learn from a multiple-time Inter-College Chess Champion with proven teaching methods.</p>
                     <div class="footer-social">
-                        <a href="https://wa.me/918591028709" target="_blank" rel="noopener" aria-label="WhatsApp">
-                            <span class="social-icon">📱</span>
+                        <a href="https://wa.me/918591028709" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+                            <span class="social-icon" aria-hidden="true">📱</span>
                         </a>
                     </div>
                 </div>
@@ -268,7 +332,8 @@
                     <ul class="footer-contact">
                         <li>📱 <a href="tel:+918591028709">+91 8591028709</a></li>
                         <li>📍 Mumbai, Maharashtra, India</li>
-                        <li>⏰ Mon-Sun: 9 AM - 9 PM</li>
+                        <li>⏰ Mon-Sun: 9 AM - 9 PM IST</li>
+                        <li>✉️ <a href="mailto:contact@chesswithrahul.in">contact@chesswithrahul.in</a></li>
                     </ul>
                 </div>
             </div>
@@ -278,15 +343,17 @@
                     <a href="privacy-policy.html">Privacy Policy</a>
                     <span>|</span>
                     <a href="terms.html">Terms & Conditions</a>
+                    <span>|</span>
+                    <a href="sitemap.xml">Sitemap</a>
                 </div>
-                <p>&copy; 2026 ChessWithRahul.in - All Rights Reserved</p>
+                <p>&copy; 2026 ChessWithRahul.in - All Rights Reserved | Chess Coaching in Mumbai</p>
             </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20get%20in%20touch" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
-        <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <a href="https://wa.me/918591028709?text=Hi%20Rahul,%20I%20want%20to%20get%20in%20touch" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp for instant response">
+        <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M16 0C7.164 0 0 7.164 0 16c0 2.828.736 5.484 2.016 7.78L.688 30.188l6.656-1.64A15.867 15.867 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.544 0-4.94-.708-6.976-1.936l-.5-.292-5.18 1.276 1.308-4.956-.32-.52A13.203 13.203 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333z" fill="currentColor"/>
             <path d="M23.547 19.547c-.34-.172-2.008-.992-2.32-1.104-.308-.112-.532-.168-.756.168-.224.336-.868 1.104-1.064 1.328-.196.224-.392.252-.732.084-.34-.168-1.436-.528-2.736-1.688-.012-.952-.364-1.792-.924-2.464-.196-.224.196-.348.56-.924.064-.112.032-.208-.016-.292-.048-.084-.756-1.82-1.036-2.492-.272-.656-.548-.568-.756-.58-.196-.008-.42-.012-.644-.012-.224 0-.588.084-.896.42-.308.336-1.176 1.148-1.176 2.8s1.204 3.248 1.372 3.472c.168.224 2.38 3.632 5.764 5.092.804.348 1.432.556 1.92.712.808.256 1.544.22 2.124.132.648-.096 2.008-.82 2.292-1.612.284-.792.284-1.472.196-1.612-.084-.14-.308-.224-.648-.392z" fill="currentColor"/>
         </svg>
@@ -296,206 +363,30 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     
-    <!-- Page-specific CSS -->
-    <style>
-        .contact-main {
-            padding: 4rem 0;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-        
-        .contact-info h2,
-        .contact-form-wrapper h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .contact-methods {
-            margin-top: 2rem;
-        }
-        
-        .contact-method {
-            background-color: var(--gray-50);
-            padding: 1.5rem;
-            border-radius: var(--radius-lg);
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--primary-color);
-        }
-        
-        .method-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-method h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
-        }
-        
-        .contact-method p {
-            margin-bottom: 0.25rem;
-        }
-        
-        .contact-method a {
-            color: var(--primary-color);
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-        
-        .method-note {
-            font-size: 0.9rem;
-            color: var(--gray-600);
-            font-style: italic;
-        }
-        
-        .quick-contact-box {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: var(--white);
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            margin-top: 2rem;
-        }
-        
-        .quick-contact-box h3,
-        .quick-contact-box p {
-            color: var(--white);
-        }
-        
-        .whatsapp-buttons {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .wa-btn {
-            background-color: var(--whatsapp);
-            color: var(--white);
-            padding: 0.75rem 1rem;
-            border-radius: var(--radius-md);
-            text-align: center;
-            font-weight: 600;
-            transition: all var(--transition-base);
-        }
-        
-        .wa-btn:hover {
-            background-color: var(--whatsapp-dark);
-            transform: translateY(-2px);
-        }
-        
-        .contact-form {
-            background-color: var(--gray-50);
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            margin-top: 1.5rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--gray-700);
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid var(--gray-300);
-            border-radius: var(--radius-md);
-            font-size: 1rem;
-            font-family: var(--font-primary);
-            transition: border-color var(--transition-base);
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-        
-        .form-note {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: var(--gray-600);
-            text-align: center;
-        }
-        
-        .form-alternative {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--gray-300);
-            text-align: center;
-        }
-        
-        .form-alternative a {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-        
-        .contact-faq {
-            background-color: var(--gray-50);
-            padding: 4rem 0;
-        }
-        
-        .contact-faq h2 {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-faq > .container > p {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .quick-answers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .quick-answer {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
-            text-align: center;
-        }
-        
-        .quick-answer h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .quick-answer a {
-            color: var(--primary-color);
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-        
-        @media (max-width: 768px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
+    <!-- Form Enhancement Script -->
+    <script>
+        // Focus styling for form inputs
+        document.querySelectorAll('input, select, textarea').forEach(function(input) {
+            input.addEventListener('focus', function() {
+                this.style.borderColor = 'var(--primary-color)';
+                this.style.outline = 'none';
+            });
             
-            .whatsapp-buttons {
-                grid-template-columns: 1fr;
-            }
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.style.borderColor = 'var(--gray-300)';
+                }
+            });
+        });
+        
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                // Optional: Add custom validation or analytics here
+                console.log('Form submitted');
+            });
         }
-    </style>
+    </script>
 </body>
 </html>
