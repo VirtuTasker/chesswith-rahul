@@ -1,79 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   
+  <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://chesswithrahul.in/</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://chesswithrahul.in/images/rahul-coach.webp</image:loc>
+      <image:title>Rahul - Chess Coach Mumbai</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://chesswithrahul.in/images/trophies.webp</image:loc>
+      <image:title>Chess Tournament Trophies</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://chesswithrahul.in/images/video-training-thumb.webp</video:thumbnail_loc>
+      <video:title>Chess Training Session - Live Coaching</video:title>
+      <video:description>Watch Rahul teaching chess tactics in a live 1-on-1 coaching session</video:description>
+      <video:content_loc>https://chesswithrahul.in/videos/training-session.mp4</video:content_loc>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://chesswithrahul.in/images/video-tournament-thumb.webp</video:thumbnail_loc>
+      <video:title>Inter-College Chess Tournament Play</video:title>
+      <video:description>Competitive chess footage from Inter-College Championships</video:description>
+      <video:content_loc>https://chesswithrahul.in/videos/tournament-play.mp4</video:content_loc>
+    </video:video>
   </url>
-  
+
+  <!-- About Page -->
   <url>
     <loc>https://chesswithrahul.in/about.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://chesswithrahul.in/images/rahul-coach.webp</image:loc>
+      <image:title>About Rahul - Chess Coach</image:title>
+    </image:image>
   </url>
-  
+
+  <!-- Beginner Chess -->
   <url>
     <loc>https://chesswithrahul.in/beginner-chess.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://chesswithrahul.in/images/beginner-players.webp</image:loc>
+      <image:title>Beginner Chess Students</image:title>
+    </image:image>
   </url>
-  
+
+  <!-- Kids Chess -->
   <url>
     <loc>https://chesswithrahul.in/kids-chess.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://chesswithrahul.in/images/kids-learning.webp</image:loc>
+      <image:title>Kids Learning Chess</image:title>
+    </image:image>
   </url>
-  
+
+  <!-- Adult & Senior Chess -->
   <url>
     <loc>https://chesswithrahul.in/adult-senior-chess.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://chesswithrahul.in/images/adults-chess.webp</image:loc>
+      <image:title>Adults Learning Chess</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://chesswithrahul.in/images/seniors-chess.webp</image:loc>
+      <image:title>Seniors Playing Chess</image:title>
+    </image:image>
   </url>
-  
+
+  <!-- 1200 Elo Training -->
   <url>
     <loc>https://chesswithrahul.in/1200-elo-training.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
+  <!-- Testimonials -->
   <url>
     <loc>https://chesswithrahul.in/testimonials.html</loc>
-    <lastmod>2026-01-29</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
+  <!-- FAQ -->
   <url>
     <loc>https://chesswithrahul.in/faq.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
+  <!-- Contact -->
   <url>
     <loc>https://chesswithrahul.in/contact.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-  
+
+  <!-- Privacy Policy -->
   <url>
     <loc>https://chesswithrahul.in/privacy-policy.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  
+
+  <!-- Terms & Conditions -->
   <url>
     <loc>https://chesswithrahul.in/terms.html</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
