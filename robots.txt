@@ -3,20 +3,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://chesswithrahul.in/sitemap.xml
-
-# Allow all pages to be indexed
-Allow: /index.html
-Allow: /about.html
-Allow: /beginner-chess.html
-Allow: /kids-chess.html
-Allow: /adult-senior-chess.html
-Allow: /1200-elo-training.html
-Allow: /testimonials.html
-Allow: /faq.html
-Allow: /contact.html
-
-# Allow CSS and JS
-Allow: /css/
-Allow: /js/
-Allow: /images/
-Allow: /videos/
