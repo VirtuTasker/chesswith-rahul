@@ -1,0 +1,25 @@
+
+
+/* Above-the-fold critical CSS for fastest LCP */
+:root{--primary:#1a1a2e;--accent:#e94560;--gold:#ffd700;--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,sans-serif;line-height:1.6;color:var(--primary)}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(26,26,46,.98);backdrop-filter:blur(10px)}
+.navbar{padding:15px 0}.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.nav-wrapper{display:flex;align-items:center;justify-content:space-between}
+.logo-text{font-size:1.5rem;font-weight:800;color:var(--gold);text-transform:uppercase}
+.nav-menu{display:flex;align-items:center;gap:30px;list-style:none}
+.nav-link{color:var(--white);font-weight:500;text-decoration:none}
+.btn-primary{display:inline-block;background:linear-gradient(135deg,#e94560,#ff6b6b);color:var(--white);padding:12px 24px;border-radius:50px;font-weight:600;text-decoration:none}
+.hero-video{position:relative;min-height:100vh;display:flex;align-items:center;margin-top:70px;background:var(--primary)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,26,46,.95),rgba(22,33,62,.9))}
+.hero-content{position:relative;z-index:1;text-align:center;padding:80px 20px;max-width:900px;margin:0 auto;color:var(--white)}
+.hero-title{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;margin-bottom:25px;line-height:1.2}
+.hero-subtitle{font-size:1.15rem;margin-bottom:35px;opacity:.9}
+.hero-features{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;margin-bottom:40px}
+.feature-badge{background:rgba(255,255,255,.1);color:var(--white);padding:10px 20px;border-radius:50px;font-size:.9rem;border:1px solid rgba(255,255,255,.2)}
+.hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.btn{padding:16px 32px;border-radius:50px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+img{max-width:100%;height:auto;display:block}
+@media(max-width:768px){.nav-menu{display:none}.hamburger{display:flex}}
