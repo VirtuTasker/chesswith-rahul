@@ -1,377 +1,329 @@
-/**
- * ChessWithRahul - Maximum SEO JavaScript
- * Personal Chess Coach Mumbai | Private Trainer
- */
+// Main JS - Vanilla, Optimized for Performance (No jQuery, Minifiable, Core Web Vitals Compliant)
+// Handles: Hamburger toggle, hero video, smooth scroll, FAQ accordion, lazy loading, SEO events
+// File: /js/main.js - Defer-loaded for non-blocking
 
-(function() {
-    'use strict';
+document.addEventListener('DOMContentLoaded', function() {
+    // Universal Settings
+    const root = document.documentElement;
+    const isMobile = window.innerWidth <= 768;
 
-    // ============================================
-    // DOM READY
-    // ============================================
-    document.addEventListener('DOMContentLoaded', function() {
-        initMobileMenu();
-        initSmoothScroll();
-        initBackToTop();
-        initLazyLoading();
-        initVideoOptimization();
-        initScrollAnimations();
-        initPerformanceTracking();
-        initAccessibility();
-    });
+    // High-Performance Lazy Loading (Native + Fallback)
+    if ('loading' in HTMLImageElement.prototype) {
+        // Native lazy
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.loading = 'lazy';
+        });
+    } else {
+        // Fallback Intersection Observer
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src;
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        document.querySelectorAll('img.lazy').forEach(img => imageObserver.observe(img));
+    }
 
-    // ============================================
-    // MOBILE MENU
-    // ============================================
-    function initMobileMenu() {
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-        
-        if (!hamburger || !navMenu) return;
+    // Hamburger Menu Toggle - Smooth, Accessible
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    const body = document.body;
 
-        hamburger.addEventListener('click', function() {
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !isExpanded);
-            navMenu.classList.toggle('active');
-            
-            // Animate hamburger
-            const lines = this.querySelectorAll('.hamburger-line');
-            if (!isExpanded) {
-                lines[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                lines[1].style.opacity = '0';
-                lines[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isActive = navMenu.classList.toggle('active');
+            hamburgerBtn.setAttribute('aria-expanded', isActive);
+            hamburgerBtn.classList.toggle('active');
+            if (isActive) {
+                body.style.overflow = 'hidden'; // Prevent body scroll
+                navMenu.style.right = '0';
             } else {
-                lines[0].style.transform = '';
-                lines[1].style.opacity = '';
-                lines[2].style.transform = '';
+                body.style.overflow = '';
+                navMenu.style.right = '-100%';
             }
         });
 
-        // Close menu on link click
+        // Close on outside click
+        document.addEventListener('click', function(e) {
+            if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                body.style.overflow = '';
+            }
+        });
+
+        // Close on link click (mobile)
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-                const lines = hamburger.querySelectorAll('.hamburger-line');
-                lines[0].style.transform = '';
-                lines[1].style.opacity = '';
-                lines[2].style.transform = '';
+                if (isMobile) {
+                    navMenu.classList.remove('active');
+                    hamburgerBtn.classList.remove('active');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    body.style.overflow = '';
+                }
             });
         });
     }
 
-    // ============================================
-    // SMOOTH SCROLL
-    // ============================================
-    function initSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (!targetElement) return;
+    // Hero Video Toggle - Visible Controls, Auto-Play Fallback
+    const heroVideo = document.querySelector('.hero-bg-video');
+    const videoToggle = document.querySelector('.hero-video-toggle');
+    let isVideoPlaying = false;
 
-                e.preventDefault();
-                
-                const headerOffset = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    if (heroVideo && videoToggle) {
+        // Intersection Observer for lazy play (only when in view)
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    heroVideo.load(); // Reload sources for fresh play
+                    if (heroVideo.paused) {
+                        heroVideo.play().catch(e => console.log('Autoplay prevented:', e)); // Handle policy
+                    }
+                    videoObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
 
+        videoObserver.observe(heroVideo);
+
+        // Manual toggle
+        videoToggle.addEventListener('click', function() {
+            if (isVideoPlaying) {
+                heroVideo.pause();
+                videoToggle.classList.remove('playing');
+                isVideoPlaying = false;
+            } else {
+                heroVideo.play().catch(e => console.log('Play failed:', e));
+                videoToggle.classList.add('playing');
+                isVideoPlaying = true;
+            }
+        });
+
+        // Mute by default, add visibility
+        heroVideo.muted = true;
+        heroVideo.volume = 0; // Ensure silent
+
+        // Visibility fix: Add subtle controls if needed
+        heroVideo.controls = false; // Hide native for clean design
+    }
+
+    // Smooth Scroll for Internal Links - SEO-Friendly (No Jump)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80; // Account for fixed header
                 window.scrollTo({
-                    top: offsetPosition,
+                    top: offsetTop,
                     behavior: 'smooth'
                 });
-
-                // Update URL without jumping
-                history.pushState(null, null, targetId);
-            });
+                // Update active nav
+                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            }
         });
-    }
+    });
 
-    // ============================================
-    // BACK TO TOP
-    // ============================================
-    function initBackToTop() {
-        const backToTop = document.getElementById('backToTop');
-        if (!backToTop) return;
+    // Header Scroll Effect - Performance Optimized
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', function() {
+        const currentScrollY = window.scrollY;
+        const header = document.querySelector('.header');
 
-        const toggleVisibility = () => {
-            if (window.pageYOffset > 500) {
-                backToTop.classList.add('visible');
+        if (currentScrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Throttle for perf
+        lastScrollY = currentScrollY;
+    });
+
+    // FAQ Accordion - Accessible, No JS Dependency for Basic
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const answer = this.nextElementSibling;
+            const item = this.parentElement;
+
+            // Toggle current
+            this.setAttribute('aria-expanded', !isExpanded);
+            if (isExpanded) {
+                answer.style.maxHeight = '0';
+                item.classList.remove('active');
             } else {
-                backToTop.classList.remove('visible');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                item.classList.add('active');
             }
-        };
 
-        window.addEventListener('scroll', throttle(toggleVisibility, 100));
-        
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            // Close others (accordion style)
+            faqQuestions.forEach(other => {
+                if (other !== this) {
+                    other.setAttribute('aria-expanded', 'false');
+                    other.parentElement.classList.remove('active');
+                    other.nextElementSibling.style.maxHeight = '0';
+                }
             });
         });
-    }
+    });
 
-    // ============================================
-    // LAZY LOADING
-    // ============================================
-    function initLazyLoading() {
-        // Lazy load images
-        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-        
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.classList.add('loaded');
-                        observer.unobserve(img);
+    // Dropdown Toggle on Mobile - Touch-Friendly
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            if (isMobile) {
+                e.preventDefault();
+                e.stopPropagation();
+                const menu = this.nextElementSibling;
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+                dropdownToggles.forEach(other => {
+                    if (other !== this) {
+                        other.setAttribute('aria-expanded', 'false');
+                        other.nextElementSibling.style.display = 'none';
                     }
                 });
-            }, {
-                rootMargin: '50px 0px'
-            });
 
-            lazyImages.forEach(img => imageObserver.observe(img));
-        }
-
-        // Lazy load iframes (videos)
-        const lazyIframes = document.querySelectorAll('iframe[loading="lazy"]');
-        
-        if ('IntersectionObserver' in window) {
-            const iframeObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const iframe = entry.target;
-                        const src = iframe.getAttribute('src');
-                        if (src && src.includes('VIDEO_ID')) {
-                            // Replace with actual video ID when in viewport
-                            // This is a placeholder - replace VIDEO_ID_1, VIDEO_ID_2, VIDEO_ID_3 with actual IDs
-                        }
-                        observer.unobserve(iframe);
-                    }
-                });
-            });
-
-            lazyIframes.forEach(iframe => iframeObserver.observe(iframe));
-        }
-    }
-
-    // ============================================
-    // VIDEO OPTIMIZATION
-    // ============================================
-    function initVideoOptimization() {
-        // Pause background video when not visible
-        const bgVideo = document.querySelector('.hero-bg-video');
-        if (!bgVideo) return;
-
-        if ('IntersectionObserver' in window) {
-            const videoObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        bgVideo.play().catch(() => {
-                            // Autoplay blocked, show poster
-                            bgVideo.setAttribute('controls', '');
-                        });
-                    } else {
-                        bgVideo.pause();
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            videoObserver.observe(bgVideo);
-        }
-    }
-
-    // ============================================
-    // SCROLL ANIMATIONS
-    // ============================================
-    function initScrollAnimations() {
-        const animatedElements = document.querySelectorAll(
-            '.intro-highlight, .trust-item, .program-card, .testimonial-card, .advantage-card, .area-badge'
-        );
-
-        if ('IntersectionObserver' in window) {
-            const animationObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                        animationObserver.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-
-            animatedElements.forEach((el, index) => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-                animationObserver.observe(el);
-            });
-        }
-    }
-
-    // ============================================
-    // PERFORMANCE TRACKING (SEO)
-    // ============================================
-    function initPerformanceTracking() {
-        // Core Web Vitals tracking
-        if ('web-vitals' in window) {
-            // LCP
-            new PerformanceObserver((list) => {
-                const entries = list.getEntries();
-                const lastEntry = entries[entries.length - 1];
-                console.log('LCP:', lastEntry.startTime);
-            }).observe({ entryTypes: ['largest-contentful-paint'] });
-
-            // FID
-            new PerformanceObserver((list) => {
-                for (const entry of list.getEntries()) {
-                    const delay = entry.processingStart - entry.startTime;
-                    console.log('FID:', delay);
-                }
-            }).observe({ entryTypes: ['first-input'] });
-
-            // CLS
-            let clsValue = 0;
-            new PerformanceObserver((list) => {
-                for (const entry of list.getEntries()) {
-                    if (!entry.hadRecentInput) {
-                        clsValue += entry.value;
-                    }
-                }
-                console.log('CLS:', clsValue);
-            }).observe({ entryTypes: ['layout-shift'] });
-        }
-
-        // Track user engagement for SEO signals
-        let maxScrollDepth = 0;
-        const trackScrollDepth = throttle(() => {
-            const scrollPercent = Math.round(
-                (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100
-            );
-            if (scrollPercent > maxScrollDepth) {
-                maxScrollDepth = scrollPercent;
-                if (maxScrollDepth % 25 === 0) {
-                    // Send to analytics: User scrolled X%
-                    console.log('Scroll depth:', maxScrollDepth + '%');
-                }
-            }
-        }, 500);
-
-        window.addEventListener('scroll', trackScrollDepth);
-
-        // Track time on page
-        let startTime = Date.now();
-        window.addEventListener('beforeunload', () => {
-            const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-            console.log('Time on page:', timeOnPage + 's');
-        });
-    }
-
-    // ============================================
-    // ACCESSIBILITY ENHANCEMENTS
-    // ============================================
-    function initAccessibility() {
-        // Add skip link
-        const skipLink = document.createElement('a');
-        skipLink.href = '#main-content';
-        skipLink.className = 'skip-link';
-        skipLink.textContent = 'Skip to main content';
-        document.body.insertBefore(skipLink, document.body.firstChild);
-
-        // Add main-content id to first section
-        const firstSection = document.querySelector('section');
-        if (firstSection) {
-            firstSection.id = firstSection.id || 'main-content';
-        }
-
-        // Handle focus for dropdowns
-        document.querySelectorAll('.dropdown').forEach(dropdown => {
-            const toggle = dropdown.querySelector('.dropdown-toggle');
-            const menu = dropdown.querySelector('.dropdown-menu');
-
-            if (toggle && menu) {
-                toggle.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-                    toggle.setAttribute('aria-expanded', !isExpanded);
-                    menu.style.opacity = isExpanded ? '0' : '1';
-                    menu.style.visibility = isExpanded ? 'hidden' : 'visible';
-                });
-            }
-        });
-
-        // Escape key to close mobile menu
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                const navMenu = document.getElementById('navMenu');
-                const hamburger = document.getElementById('hamburger');
-                if (navMenu && navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
+                if (isExpanded) {
+                    menu.style.display = 'none';
+                    this.setAttribute('aria-expanded', 'false');
+                } else {
+                    menu.style.display = 'block';
+                    this.setAttribute('aria-expanded', 'true');
                 }
             }
         });
-    }
+    });
 
-    // ============================================
-    // UTILITY FUNCTIONS
-    // ============================================
-    function throttle(func, limit) {
-        let inThrottle;
-        return function() {
-            const args = arguments;
-            const context = this;
-            if (!inThrottle) {
-                func.apply(context, args);
-                inThrottle = true;
-                setTimeout(() => inThrottle = false, limit);
+    // Intersection Observer for Animations - Perf-Optimized (Threshold for SEO)
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const animateObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                animateObserver.unobserve(entry.target);
             }
-        };
+        });
+    }, observerOptions);
+
+    // Apply to sections/cards
+    document.querySelectorAll('.program-card, .timeline-item, .testimonial-card, .faq-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        animateObserver.observe(el);
+    });
+
+    // Back to Top Button - SEO (Reduces Bounce)
+    const backToTop = document.createElement('button');
+    backToTop.innerHTML = '↑ Top';
+    backToTop.className = 'back-to-top';
+    backToTop.style.cssText = 'position:fixed;bottom:20px;right:20px;width:50px;height:50px;background:#16213e;color:#fff;border:none;border-radius:50%;cursor:pointer;opacity:0;visibility:hidden;transition:all 0.3s ease;z-index:999;display:flex;align-items:center;justify-content:center;font-weight:bold;';
+    document.body.appendChild(backToTop);
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+            backToTop.style.opacity = '1';
+            backToTop.style.visibility = 'visible';
+        } else {
+            backToTop.style.opacity = '0';
+            backToTop.style.visibility = 'hidden';
+        }
+    });
+
+    backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // SEO: Track Scroll Depth for Engagement
+    let scrollDepth = 0;
+    const trackPoints = [25, 50, 75, 100];
+    let tracked = new Set();
+
+    window.addEventListener('scroll', function() {
+        const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        scrollDepth = Math.floor(scrolled);
+
+        trackPoints.forEach(point => {
+            if (scrollDepth >= point && !tracked.has(point)) {
+                tracked.add(point);
+                // Could send to GA: gtag('event', 'scroll', { 'event_category': 'engagement', 'event_label': `depth_${point}%` });
+                console.log(`Scroll depth reached: ${point}%`); // Placeholder for analytics
+            }
+        });
+    });
+
+    // Performance: Preload Critical Resources
+    if ('link' in document.createElement('link')) {
+        const preloadLinks = [
+            { href: '/images/rahul-chess-coach-mumbai-hero.webp', as: 'image', type: 'image/webp' },
+            { href: '/videos/chess-coaching-hero-optimized-mumbai.mp4', as: 'video', type: 'video/mp4' }
+        ];
+        preloadLinks.forEach(link => {
+            const pl = document.createElement('link');
+            pl.rel = 'preload';
+            pl.as = link.as;
+            pl.href = link.href;
+            pl.type = link.type;
+            document.head.appendChild(pl);
+        });
     }
 
-    // Debounce function for resize events
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
+    // Error Handling: Graceful Fallbacks
+    window.addEventListener('error', function(e) {
+        console.warn('JS Error caught:', e.message);
+        // Fallback: Ensure core nav works
+        if (e.message.includes('hamburger')) {
+            location.reload();
+        }
+    });
 
-    // Preload critical resources
-    function preloadResource(url, as, type) {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = url;
-        link.as = as;
-        if (type) link.type = type;
-        document.head.appendChild(link);
-    }
-
-    // ============================================
-    // SERVICE WORKER (PWA)
-    // ============================================
+    // PWA/Offline: Register Service Worker if Exists
     if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-                .then(registration => {
-                    console.log('SW registered:', registration);
-                })
-                .catch(error => {
-                    console.log('SW registration failed:', error);
-                });
-        });
+        navigator.serviceWorker.register('/sw.js').catch(e => console.log('SW reg failed:', e));
     }
 
-})();
+    // Mumbai Timezone Easter Egg (Personalization)
+    const now = new Date();
+    const mumbaiTime = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+    if (now.getHours() >= 9 && now.getHours() < 21) {
+        // Add subtle banner: "Sessions available now!"
+        const banner = document.createElement('div');
+        banner.textContent = '🕒 Sessions Available Now in Mumbai!';
+        banner.style.cssText = 'position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#28a745;color:#fff;padding:0.5rem 1rem;border-radius:20px;z-index:999;font-size:0.875rem;opacity:0.9;';
+        document.body.appendChild(banner);
+        setTimeout(() => banner.remove(), 5000);
+    }
+});
+
+// Global Functions (Exposed for Inline Calls)
+function toggleHeroVideo() {
+    const video = document.querySelector('.hero-bg-video');
+    const toggle = document.querySelector('.hero-video-toggle');
+    if (video.paused) {
+        video.play();
+        toggle.classList.add('playing');
+    } else {
+        video.pause();
+        toggle.classList.remove('playing');
+    }
+}
+
+// Export for Minification/SEO Tools
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { toggleHeroVideo };
+}
