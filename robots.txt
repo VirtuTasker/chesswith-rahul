@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
 Sitemap: https://chesswithrahul.in/sitemap.xml
+
+# Block low-value files
+Disallow: /cdn-cgi/

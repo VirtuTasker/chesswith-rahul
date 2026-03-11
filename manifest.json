@@ -1,0 +1,49 @@
+{
+  "name": "ChessWithRahul — Personal Chess Coach Mumbai",
+  "short_name": "ChessWithRahul",
+  "description": "Mumbai's top personal chess coach. Private one-on-one home tuition by Inter-College Champion Rahul. 4.9★ rated. ₹1200/session. FREE trial.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f2540",
+  "theme_color": "#0f2540",
+  "orientation": "portrait-primary",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/images/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/rahul-coach.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "sports"],
+  "screenshots": [
+    {
+      "src": "/images/rahul-coach.webp",
+      "sizes": "400x400",
+      "type": "image/webp",
+      "label": "Personal Chess Coach Rahul — Mumbai Home Tuition"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Free Trial",
+      "short_name": "Book Now",
+      "description": "Book a free trial chess coaching session",
+      "url": "https://wa.me/918591028709?text=I%20want%20to%20book%20a%20free%20chess%20trial",
+      "icons": [{"src": "/images/favicon.ico", "sizes": "48x48"}]
+    },
+    {
+      "name": "Call Coach",
+      "short_name": "Call Now",
+      "description": "Call personal chess coach Rahul",
+      "url": "tel:+918591028709",
+      "icons": [{"src": "/images/favicon.ico", "sizes": "48x48"}]
+    }
+  ]
+}
