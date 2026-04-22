@@ -1,7 +1,37 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chesswithrahul.in/sitemap.xml
+# Core pages - all indexed
+Allow: /index.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /pricing.html
+Allow: /trainers.html
+Allow: /become-a-trainer.html
+Allow: /kids-chess.html
+Allow: /beginner-chess.html
+Allow: /adult-senior-chess.html
+Allow: /1200-elo-training.html
+Allow: /testimonials.html
+Allow: /faq.html
+Allow: /blog/
+Allow: /trainers/
 
-# Block low-value files
-Disallow: /cdn-cgi/
+# Location pages
+Allow: /chess-coach-kandivali.html
+Allow: /chess-coach-borivali.html
+Allow: /chess-coach-malad.html
+Allow: /chess-coach-goregaon.html
+Allow: /chess-coach-andheri.html
+Allow: /chess-coach-jogeshwari.html
+Allow: /chess-coach-santacruz.html
+Allow: /chess-coach-bandra.html
+Allow: /chess-coach-dadar.html
+Allow: /chess-coach-dahisar.html
+Allow: /chess-coach-powai.html
+Allow: /chess-coach-mulund.html
+Allow: /chess-coach-chembur.html
+Allow: /chess-coach-thane.html
+
+# Sitemap
+Sitemap: https://chesswithrahul.in/sitemap.xml

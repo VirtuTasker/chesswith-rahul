@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Trainers in Mumbai 2026 | Verified Home Chess Coaches | ChessWithRahul Academy Marketplace</title>
+<meta name="description" content="Find verified home chess trainers in Mumbai. 6 expert coaches covering Kandivali, Andheri, Borivali, Malad, Dadar, Powai & all Mumbai areas. Personally vetted by Rahul — Inter-College Chess Champion. ₹1,200/session.">
+<meta name="keywords" content="chess trainers Mumbai, chess coaches Mumbai, home chess trainer Mumbai, chess tutor near me Mumbai, private chess coach Mumbai, chess trainer marketplace Mumbai">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://chesswithrahul.in/trainers.html">
+<meta property="og:title" content="Chess Trainers in Mumbai | ChessWithRahul Academy Marketplace">
+<meta property="og:description" content="Meet verified home chess trainers across all Mumbai areas. Personally vetted by Rahul — Inter-College Champion.">
+<meta property="og:url" content="https://chesswithrahul.in/trainers.html">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"Chess Trainers in Mumbai — ChessWithRahul Academy",
+  "description":"Verified home chess trainers across all Mumbai areas",
+  "url":"https://chesswithrahul.in/trainers.html",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Rahul — Lead Trainer, Kandivali"},
+    {"@type":"ListItem","position":2,"name":"Priya — Andheri & Jogeshwari"},
+    {"@type":"ListItem","position":3,"name":"Arjun — Borivali & Dahisar"},
+    {"@type":"ListItem","position":4,"name":"Sneha — Dadar & Bandra"}
+  ]
+}
+</script>
+<style>
+.trainer-filter-bar{background:var(--gray-50);border-bottom:1px solid var(--gray-200);padding:1.25rem 0;position:sticky;top:var(--nav-height);z-index:100;}
+.filter-inner{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;}
+.filter-label{font-size:.8rem;font-weight:700;color:var(--gray-600);text-transform:uppercase;letter-spacing:.07em;margin-right:.25rem;}
+.filter-btn{background:var(--white);border:1.5px solid var(--gray-300);color:var(--gray-700);padding:.38rem .9rem;border-radius:var(--r-full);font-size:.82rem;font-weight:600;cursor:pointer;transition:all var(--t);font-family:var(--font-body);}
+.filter-btn:hover,.filter-btn.active{background:var(--navy);border-color:var(--navy);color:var(--white);}
+.trainer-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);padding:5rem 0 4rem;text-align:center;}
+.trainer-hero h1{color:var(--white);margin-bottom:1rem;}
+.trainer-hero p{color:rgba(255,255,255,.82);max-width:640px;margin:0 auto 1.5rem;font-size:1.05rem;line-height:1.8;}
+.trainer-count-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(201,162,39,.18);border:1px solid var(--gold);color:var(--gold);padding:.45rem 1.25rem;border-radius:var(--r-full);font-size:.85rem;font-weight:700;margin-bottom:1.5rem;}
+.trainer-card-v2{background:var(--white);border:1.5px solid var(--gray-200);border-radius:var(--r-2xl);overflow:hidden;box-shadow:var(--sh-md);transition:all .3s ease;display:flex;flex-direction:column;}
+.trainer-card-v2:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.12);border-color:var(--navy-light);}
+.trainer-card-v2.featured-card{border:2px solid var(--gold);}
+.tc-img-wrap{position:relative;overflow:hidden;height:260px;background:var(--gray-100);}
+.tc-img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .4s ease;}
+.trainer-card-v2:hover .tc-img{transform:scale(1.05);}
+.tc-img-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;background:linear-gradient(135deg,var(--navy-pale),#e2eaf5);}
+.tc-img-placeholder .ph-icon{font-size:3.5rem;}
+.tc-img-placeholder .ph-text{font-size:.75rem;color:var(--gray-500);font-weight:600;text-align:center;line-height:1.4;}
+.tc-badges{position:absolute;top:.85rem;left:.85rem;display:flex;flex-direction:column;gap:.4rem;}
+.tc-badge{font-size:.68rem;font-weight:800;padding:.28rem .75rem;border-radius:var(--r-full);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
+.tc-badge.gold{background:var(--gold);color:#1a1a1a;}
+.tc-badge.green{background:#2e7d32;color:#fff;}
+.tc-badge.navy{background:var(--navy);color:#fff;}
+.tc-avail{position:absolute;bottom:.85rem;right:.85rem;background:rgba(46,125,50,.9);color:#fff;font-size:.72rem;font-weight:700;padding:.3rem .75rem;border-radius:var(--r-full);backdrop-filter:blur(4px);}
+.tc-avail.limited{background:rgba(230,100,0,.9);}
+.tc-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;}
+.tc-name{font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:var(--navy);margin-bottom:.15rem;}
+.tc-role{font-size:.78rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.2rem;}
+.tc-location{font-size:.82rem;color:var(--gray-600);margin-bottom:.85rem;display:flex;align-items:center;gap:.35rem;}
+.tc-bio{font-size:.875rem;color:var(--gray-700);line-height:1.7;margin-bottom:1rem;flex:1;}
+.tc-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;margin-bottom:1rem;background:var(--gray-50);border-radius:var(--r-lg);padding:.75rem;}
+.tc-stat{text-align:center;}
+.tc-stat-val{font-family:var(--font-display);font-size:1.05rem;font-weight:800;color:var(--navy);display:block;}
+.tc-stat-lbl{font-size:.65rem;color:var(--gray-500);font-weight:600;text-transform:uppercase;letter-spacing:.06em;}
+.tc-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.25rem;}
+.tc-tag{background:var(--navy-pale);color:var(--navy);font-size:.7rem;font-weight:700;padding:.22rem .6rem;border-radius:var(--r-full);}
+.tc-actions{display:flex;gap:.6rem;flex-wrap:wrap;}
+.tc-actions .btn{flex:1;min-width:120px;font-size:.85rem;padding:.65rem 1rem;}
+.section-divider{height:1px;background:linear-gradient(to right,transparent,var(--gray-300),transparent);margin:3rem 0;}
+.trainer-guarantee{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);border-radius:var(--r-2xl);padding:2.5rem;color:var(--white);text-align:center;margin-top:3rem;}
+.trainer-guarantee h3{color:var(--white);margin-bottom:.75rem;}
+.trainer-guarantee p{color:rgba(255,255,255,.82);max-width:580px;margin:0 auto 1.5rem;font-size:.95rem;line-height:1.8;}
+.become-cta-strip{background:var(--gold-pale);border:1.5px solid var(--gold);border-radius:var(--r-xl);padding:1.75rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-top:2rem;}
+.become-cta-strip p{font-weight:700;color:var(--navy);font-size:1rem;margin:0;}
+.become-cta-strip span{font-size:.875rem;color:var(--gray-600);font-weight:400;display:block;margin-top:.2rem;}
+@media(max-width:768px){.tc-actions .btn{font-size:.8rem;padding:.55rem .75rem;}.become-cta-strip{flex-direction:column;}.trainer-filter-bar{position:static;}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Verified Chess Trainers in Mumbai — ChessWithRahul Academy",
+  "description": "Verified home chess trainers covering all Mumbai areas — personally vetted by Rahul, Inter-College Chess Champion",
+  "url": "https://chesswithrahul.in/trainers.html",
+  "numberOfItems": 6,
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "url": "https://chesswithrahul.in/trainers/rahul.html", "name": "Rahul — Lead Trainer, Kandivali Mumbai"},
+    {"@type": "ListItem", "position": 2, "url": "https://chesswithrahul.in/trainers/priya.html", "name": "Priya Sharma — Kids Chess Specialist, Andheri Mumbai"},
+    {"@type": "ListItem", "position": 3, "url": "https://chesswithrahul.in/trainers/arjun.html", "name": "Arjun Mehta — Competitive Chess Trainer, Borivali Mumbai"},
+    {"@type": "ListItem", "position": 4, "url": "https://chesswithrahul.in/trainers/sneha.html", "name": "Sneha Patil — Home Chess Trainer, Dadar Mumbai"},
+    {"@type": "ListItem", "position": 5, "url": "https://chesswithrahul.in/trainers/vikram.html", "name": "Vikram Nair — Home Chess Trainer, Powai Mumbai"},
+    {"@type": "ListItem", "position": 6, "url": "https://chesswithrahul.in/trainers/riya.html", "name": "Riya Desai — Kids Chess Trainer, Malad Mumbai"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <a href="/" aria-label="Chess with Rahul Academy">
+            <span class="logo-name">ChessWithRahul<span class="logo-tag">Academy</span></span>
+          </a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" type="button">
+          <span class="hline"></span><span class="hline"></span><span class="hline"></span>
+        </button>
+        <ul class="nav-menu" id="navMenu" role="menubar">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/about.html" class="nav-link">Our Academy</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true">Programs ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="/kids-chess.html" class="dropdown-link">Kids Chess Classes</a></li>
+              <li><a href="/beginner-chess.html" class="dropdown-link">Beginner Coaching</a></li>
+              <li><a href="/adult-senior-chess.html" class="dropdown-link">Adult Training</a></li>
+              <li><a href="/1200-elo-training.html" class="dropdown-link">Rating Improvement</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/trainers.html" class="nav-link active">Our Trainers</a></li>
+          <li class="nav-item"><a href="/pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="/contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="https://wa.me/918591028709?text=Hi%2C%20I%20want%20to%20book%20chess%20coaching%20at%20home" class="btn btn-gold" target="_blank" rel="noopener noreferrer" style="padding:.5rem 1.2rem;font-size:.875rem;">Book Session</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main style="padding-top:var(--nav-height);">
+
+<!-- HERO -->
+<section class="trainer-hero">
+  <div class="container">
+    <div class="trainer-count-badge">♟ 8 Verified Trainers Across Mumbai</div>
+    <h1>Meet Mumbai's Best Home Chess Trainers</h1>
+    <p>Every trainer on our platform is personally vetted and quality-checked by Rahul — Multiple Inter-College Chess Champion. We don't list everyone. We only list the best.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;">
+      <span class="trust-pill">✅ Background Verified</span>
+      <span class="trust-pill">🏆 Champion-Approved</span>
+      <span class="trust-pill">📍 Home Visit Guaranteed</span>
+      <span class="trust-pill">⭐ Rated by Students</span>
+      <span class="trust-pill">📍 Chess Session</span>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="trainer-filter-bar">
+  <div class="container">
+    <div class="filter-inner">
+      <span class="filter-label">Filter by area:</span>
+      <button class="filter-btn active" onclick="filterTrainers('all')">All Mumbai</button>
+      <button class="filter-btn" onclick="filterTrainers('western')">Western Line</button>
+      <button class="filter-btn" onclick="filterTrainers('central')">Central Line</button>
+      <button class="filter-btn" onclick="filterTrainers('harbour')">Harbour Line</button>
+      <button class="filter-btn" onclick="filterTrainers('kids')">Kids Specialist</button>
+      <button class="filter-btn" onclick="filterTrainers('competitive')">Competitive Players</button>
+    </div>
+  </div>
+</div>
+
+<!-- TRAINERS GRID -->
+<section class="sec sec-white">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Our Verified Chess Trainers</h2>
+      <p class="section-subtitle">Find a trainer near your Mumbai neighbourhood. All coaches bring a professional chess board, clock, and personalised lesson plan to your home.</p>
+    </div>
+
+    <div class="trainers-grid" id="trainersGrid">
+
+      <!-- TRAINER 1: RAHUL (LEAD) -->
+      <div class="trainer-card-v2 featured-card" data-zone="western" data-specialty="kids competitive">
+        <div class="tc-img-wrap">
+          <!-- Upload trainer image as: /images/trainer-rahul.webp -->
+          <img src="/images/rahul-coach.webp" alt="Rahul — Lead Chess Trainer Kandivali Mumbai" class="tc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="tc-img-placeholder" style="display:none;">
+            <span class="ph-icon">♟</span>
+            <span class="ph-text">Upload trainer photo as<br>/images/trainer-rahul.webp</span>
+          </div>
+          <div class="tc-badges">
+            <span class="tc-badge gold">⭐ Lead Trainer</span>
+            <span class="tc-badge green">🏆 Champion</span>
+          </div>
+          <span class="tc-avail">✅ Taking Students</span>
+        </div>
+        <div class="tc-body">
+          <div class="tc-name">Rahul</div>
+          <div class="tc-role">Founder & Lead Trainer</div>
+          <div class="tc-location">📍 Kandivali East — covers all Western Line</div>
+          <div class="tc-stats">
+            <div class="tc-stat"><span class="tc-stat-val">52+</span><span class="tc-stat-lbl">Students</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">4.9★</span><span class="tc-stat-lbl">Rating</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">6 yrs</span><span class="tc-stat-lbl">Coaching</span></div>
+          </div>
+          <p class="tc-bio">Multiple Inter-College Chess Champion and founder of ChessWithRahul Academy. Rahul's home turf is Kandivali East — making him the fastest and most available trainer for the Western suburbs. His teaching method combines structured opening theory with tactical puzzles and psychological game preparation.</p>
+          <div class="tc-tags">
+            <span class="tc-tag">Kids (6–16)</span>
+            <span class="tc-tag">Adults</span>
+            <span class="tc-tag">Beginners</span>
+            <span class="tc-tag">Competitive</span>
+            <span class="tc-tag">Elo Improvement</span>
+            <span class="tc-tag">Home Visit</span>
+          </div>
+          <div class="tc-actions">
+            <a href="https://wa.me/918591028709?text=I+want+to+book+Rahul+for+home+chess+coaching" class="btn btn-gold" target="_blank" rel="noopener noreferrer">📱 Book Rahul</a>
+            <a href="/chess-coach-kandivali.html" class="btn btn-outline">View Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAINER 2: PRIYA -->
+      <div class="trainer-card-v2" data-zone="western" data-specialty="kids">
+        <div class="tc-img-wrap">
+          <!-- Upload trainer image as: /images/trainer-priya.webp -->
+          <img src="/images/trainer-priya.webp" alt="Priya — Chess Trainer Andheri Mumbai" class="tc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="tc-img-placeholder" style="display:none;">
+            <span class="ph-icon">♟</span>
+            <span class="ph-text">Upload trainer photo as<br>/images/trainer-priya.webp</span>
+          </div>
+          <div class="tc-badges">
+            <span class="tc-badge navy">Kids Specialist</span>
+          </div>
+          <span class="tc-avail">✅ Taking Students</span>
+        </div>
+        <div class="tc-body">
+          <div class="tc-name">Priya Sharma</div>
+          <div class="tc-role">Kids Chess Specialist</div>
+          <div class="tc-location">📍 Andheri West — covers Jogeshwari, Santacruz</div>
+          <div class="tc-stats">
+            <div class="tc-stat"><span class="tc-stat-val">30+</span><span class="tc-stat-lbl">Students</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">4.8★</span><span class="tc-stat-lbl">Rating</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">4 yrs</span><span class="tc-stat-lbl">Coaching</span></div>
+          </div>
+          <p class="tc-bio">Priya specialises in making chess fun and engaging for young learners aged 5–12. Her game-first approach uses storytelling and puzzles to teach openings and tactics. Andheri area families love her patience and her ability to keep kids excited about coming back each week.</p>
+          <div class="tc-tags">
+            <span class="tc-tag">Kids (5–12)</span>
+            <span class="tc-tag">Beginners</span>
+            <span class="tc-tag">Home Visit</span>
+            <span class="tc-tag">Andheri</span>
+            <span class="tc-tag">Jogeshwari</span>
+          </div>
+          <div class="tc-actions">
+            <a href="https://wa.me/918591028709?text=I+want+to+book+Priya+for+home+chess+coaching+in+Andheri" class="btn btn-gold" target="_blank" rel="noopener noreferrer">📱 Book Priya</a>
+            <a href="/chess-coach-andheri.html" class="btn btn-outline">Andheri Page</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAINER 3: ARJUN -->
+      <div class="trainer-card-v2" data-zone="western" data-specialty="competitive">
+        <div class="tc-img-wrap">
+          <!-- Upload trainer image as: /images/trainer-arjun.webp -->
+          <img src="/images/trainer-arjun.webp" alt="Arjun — Chess Trainer Borivali Mumbai" class="tc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="tc-img-placeholder" style="display:none;">
+            <span class="ph-icon">♟</span>
+            <span class="ph-text">Upload trainer photo as<br>/images/trainer-arjun.webp</span>
+          </div>
+          <div class="tc-badges">
+            <span class="tc-badge navy">Competitive Expert</span>
+          </div>
+          <span class="tc-avail limited">⚡ Limited Slots</span>
+        </div>
+        <div class="tc-body">
+          <div class="tc-name">Arjun Mehta</div>
+          <div class="tc-role">Competitive & Rating Trainer</div>
+          <div class="tc-location">📍 Borivali West — covers Dahisar, Mira Road</div>
+          <div class="tc-stats">
+            <div class="tc-stat"><span class="tc-stat-val">22+</span><span class="tc-stat-lbl">Students</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">4.8★</span><span class="tc-stat-lbl">Rating</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">5 yrs</span><span class="tc-stat-lbl">Coaching</span></div>
+          </div>
+          <p class="tc-bio">Arjun's focus is on competitive players and rating improvement. FIDE-rated himself, he brings deep opening preparation, endgame technique, and tournament mindset coaching to every session. Students regularly gain 200–400 Elo points under his guidance within 6 months.</p>
+          <div class="tc-tags">
+            <span class="tc-tag">Competitive</span>
+            <span class="tc-tag">Elo 800–1800</span>
+            <span class="tc-tag">Opening Prep</span>
+            <span class="tc-tag">Borivali</span>
+            <span class="tc-tag">Dahisar</span>
+          </div>
+          <div class="tc-actions">
+            <a href="https://wa.me/918591028709?text=I+want+to+book+Arjun+for+competitive+chess+coaching+in+Borivali" class="btn btn-gold" target="_blank" rel="noopener noreferrer">📱 Book Arjun</a>
+            <a href="/chess-coach-borivali.html" class="btn btn-outline">Borivali Page</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAINER 4: SNEHA -->
+      <div class="trainer-card-v2" data-zone="central" data-specialty="kids">
+        <div class="tc-img-wrap">
+          <!-- Upload trainer image as: /images/trainer-sneha.webp -->
+          <img src="/images/trainer-sneha.webp" alt="Sneha — Chess Trainer Dadar Mumbai" class="tc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="tc-img-placeholder" style="display:none;">
+            <span class="ph-icon">♟</span>
+            <span class="ph-text">Upload trainer photo as<br>/images/trainer-sneha.webp</span>
+          </div>
+          <div class="tc-badges">
+            <span class="tc-badge navy">Central Mumbai</span>
+          </div>
+          <span class="tc-avail">✅ Taking Students</span>
+        </div>
+        <div class="tc-body">
+          <div class="tc-name">Sneha Patil</div>
+          <div class="tc-role">Home Chess Trainer</div>
+          <div class="tc-location">📍 Dadar East — covers Bandra, Matunga, Sion</div>
+          <div class="tc-stats">
+            <div class="tc-stat"><span class="tc-stat-val">18+</span><span class="tc-stat-lbl">Students</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">4.7★</span><span class="tc-stat-lbl">Rating</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">3 yrs</span><span class="tc-stat-lbl">Coaching</span></div>
+          </div>
+          <p class="tc-bio">Sneha covers the heart of Mumbai — Dadar, Bandra, Matunga and the surrounding central areas. She works with students of all ages and is particularly effective with adults who are learning chess from scratch. Her calm, methodical approach helps new players build confidence quickly.</p>
+          <div class="tc-tags">
+            <span class="tc-tag">All Ages</span>
+            <span class="tc-tag">Beginners</span>
+            <span class="tc-tag">Adults</span>
+            <span class="tc-tag">Dadar</span>
+            <span class="tc-tag">Bandra</span>
+          </div>
+          <div class="tc-actions">
+            <a href="https://wa.me/918591028709?text=I+want+to+book+Sneha+for+home+chess+coaching+in+Dadar" class="btn btn-gold" target="_blank" rel="noopener noreferrer">📱 Book Sneha</a>
+            <a href="/chess-coach-dadar.html" class="btn btn-outline">Dadar Page</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAINER 5: VIKRAM -->
+      <div class="trainer-card-v2" data-zone="central harbour" data-specialty="competitive kids">
+        <div class="tc-img-wrap">
+          <img src="/images/trainer-vikram.webp" alt="Vikram — Chess Trainer Powai Mumbai" class="tc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="tc-img-placeholder" style="display:none;">
+            <span class="ph-icon">♟</span>
+            <span class="ph-text">Upload trainer photo as<br>/images/trainer-vikram.webp</span>
+          </div>
+          <div class="tc-badges">
+            <span class="tc-badge navy">East Mumbai</span>
+          </div>
+          <span class="tc-avail">✅ Taking Students</span>
+        </div>
+        <div class="tc-body">
+          <div class="tc-name">Vikram Nair</div>
+          <div class="tc-role">Home Chess Trainer</div>
+          <div class="tc-location">📍 Powai — covers Mulund, Chembur, Thane</div>
+          <div class="tc-stats">
+            <div class="tc-stat"><span class="tc-stat-val">15+</span><span class="tc-stat-lbl">Students</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">4.7★</span><span class="tc-stat-lbl">Rating</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">3 yrs</span><span class="tc-stat-lbl">Coaching</span></div>
+          </div>
+          <p class="tc-bio">Vikram covers the eastern suburbs — Powai, Mulund, Chembur and Thane. An engineer by training, he brings an analytical, systematic approach to chess that resonates particularly well with students in Powai's tech-professional community. Strong at teaching calculation and positional understanding.</p>
+          <div class="tc-tags">
+            <span class="tc-tag">Adults</span>
+            <span class="tc-tag">Kids</span>
+            <span class="tc-tag">Powai</span>
+            <span class="tc-tag">Mulund</span>
+            <span class="tc-tag">Chembur</span>
+            <span class="tc-tag">Thane</span>
+          </div>
+          <div class="tc-actions">
+            <a href="https://wa.me/918591028709?text=I+want+to+book+Vikram+for+chess+coaching+in+Powai" class="btn btn-gold" target="_blank" rel="noopener noreferrer">📱 Book Vikram</a>
+            <a href="/chess-coach-powai.html" class="btn btn-outline">Powai Page</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAINER 6: RIYA -->
+      <div class="trainer-card-v2" data-zone="western" data-specialty="kids">
+        <div class="tc-img-wrap">
+          <img src="/images/trainer-riya.webp" alt="Riya — Chess Trainer Malad Mumbai" class="tc-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="tc-img-placeholder" style="display:none;">
+            <span class="ph-icon">♟</span>
+            <span class="ph-text">Upload trainer photo as<br>/images/trainer-riya.webp</span>
+          </div>
+          <div class="tc-badges">
+            <span class="tc-badge navy">Malad Specialist</span>
+          </div>
+          <span class="tc-avail">✅ Taking Students</span>
+        </div>
+        <div class="tc-body">
+          <div class="tc-name">Riya Desai</div>
+          <div class="tc-role">Home Chess Trainer</div>
+          <div class="tc-location">📍 Malad West — covers Goregaon, Kandivali West</div>
+          <div class="tc-stats">
+            <div class="tc-stat"><span class="tc-stat-val">12+</span><span class="tc-stat-lbl">Students</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">4.8★</span><span class="tc-stat-lbl">Rating</span></div>
+            <div class="tc-stat"><span class="tc-stat-val">2 yrs</span><span class="tc-stat-lbl">Coaching</span></div>
+          </div>
+          <p class="tc-bio">Riya is one of our newest and fastest-growing trainers, based in Malad West. She specialises in younger children (ages 5–10) and brings creative, activity-based teaching methods. Her weekend batch slots fill up quickly — book early to secure a slot in Malad or Goregaon.</p>
+          <div class="tc-tags">
+            <span class="tc-tag">Kids (5–10)</span>
+            <span class="tc-tag">Beginners</span>
+            <span class="tc-tag">Malad</span>
+            <span class="tc-tag">Goregaon</span>
+            <span class="tc-tag">Weekend Batches</span>
+          </div>
+          <div class="tc-actions">
+            <a href="https://wa.me/918591028709?text=I+want+to+book+Riya+for+home+chess+coaching+in+Malad" class="btn btn-gold" target="_blank" rel="noopener noreferrer">📱 Book Riya</a>
+            <a href="/chess-coach-malad.html" class="btn btn-outline">Malad Page</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAINER 7: COMING SOON TEASER -->
+      <div class="trainer-card-v2" data-zone="central" data-specialty="competitive" style="opacity:.8;">
+        <div class="tc-img-wrap" style="background:var(--navy);display:flex;align-items:center;justify-content:center;height:260px;">
+          <div style="text-align:center;color:rgba(255,255,255,.6);">
+            <div style="font-size:3rem;margin-bottom:.5rem;">♜</div>
+            <div style="font-size:.85rem;font-weight:700;">New Trainer<br>Joining Soon</div>
+            <div style="font-size:.75rem;margin-top:.5rem;color:var(--gold);">Central Mumbai</div>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-name">New Trainer</div>
+          <div class="tc-role">Central Mumbai — Coming Soon</div>
+          <div class="tc-location">📍 Chembur / Ghatkopar area</div>
+          <p class="tc-bio">We are currently onboarding a new verified trainer for Chembur and Ghatkopar. WhatsApp us to be notified when they go live — or book a session with Vikram who currently covers this area.</p>
+          <div class="tc-actions">
+            <a href="https://wa.me/918591028709?text=I+want+chess+coaching+in+Chembur+or+Ghatkopar" class="btn btn-navy" target="_blank" rel="noopener noreferrer">📱 Notify Me</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAINER 8: BECOME A TRAINER CTA CARD -->
+      <div class="trainer-card-v2" style="background:var(--gold-pale);border:2px dashed var(--gold);">
+        <div class="tc-img-wrap" style="background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;height:260px;">
+          <div style="text-align:center;color:#1a1a1a;">
+            <div style="font-size:3.5rem;margin-bottom:.5rem;">♟</div>
+            <div style="font-size:1.1rem;font-weight:800;font-family:'Playfair Display',serif;">Join Our Team</div>
+            <div style="font-size:.85rem;font-weight:600;margin-top:.25rem;">Earn ₹800–₹1000/session</div>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-name" style="color:var(--navy);">Are You a Chess Trainer?</div>
+          <div class="tc-role">Join the Marketplace</div>
+          <p class="tc-bio" style="color:var(--gray-700);">If you're a chess trainer in Mumbai, join our growing marketplace. Get a verified profile, consistent student leads, and full platform support. We handle the marketing — you focus on coaching.</p>
+          <div class="tc-tags">
+            <span class="tc-tag">Flexible Hours</span>
+            <span class="tc-tag">Home/Online</span>
+            <span class="tc-tag">Consistent Leads</span>
+            <span class="tc-tag">Platform Support</span>
+          </div>
+          <div class="tc-actions">
+            <a href="/become-a-trainer.html" class="btn btn-gold">Apply to Join ♟</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /trainers-grid -->
+
+    <!-- GUARANTEE SECTION -->
+    <div class="trainer-guarantee fade-in">
+      <h3>🏆 The ChessWithRahul Quality Promise</h3>
+      <p>Every trainer on our platform is personally interviewed, background-checked, and test-observed by Rahul before going live. If you are not satisfied with your first session, we will arrange an alternative trainer at zero cost. No questions asked.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-bottom:1.5rem;">
+        <span class="trust-pill">✅ Background Checked</span>
+        <span class="trust-pill">🎯 Teaching Tested</span>
+        <span class="trust-pill">🔄 Free Replacement if Unhappy</span>
+        <span class="trust-pill">📱 WhatsApp Support</span>
+      </div>
+      <a href="https://wa.me/918591028709?text=Hi%2C+I+want+to+find+the+right+chess+trainer+for+my+area" class="btn btn-gold btn-lg" target="_blank" rel="noopener noreferrer">📱 Help Me Find the Right Trainer</a>
+    </div>
+
+    <!-- BECOME A TRAINER CTA STRIP -->
+    <div class="become-cta-strip fade-in">
+      <div>
+        <p>Are you a chess player or coach in Mumbai? <span>Join our trainer marketplace — earn ₹800–₹1000 per session with a flexible schedule.</span></p>
+      </div>
+      <a href="/become-a-trainer.html" class="btn btn-navy">Become a Trainer →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- AREAS COVERED -->
+<section class="areas-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Trainers Available Across Mumbai</h2>
+      <p class="section-subtitle">We have verified trainers covering every major area. Click your neighbourhood to see who's available near you.</p>
+    </div>
+    <div class="areas-grid">
+      <a href="/chess-coach-kandivali.html" class="area-pill">📍 Kandivali</a>
+      <a href="/chess-coach-borivali.html" class="area-pill">📍 Borivali</a>
+      <a href="/chess-coach-malad.html" class="area-pill">📍 Malad</a>
+      <a href="/chess-coach-goregaon.html" class="area-pill">📍 Goregaon</a>
+      <a href="/chess-coach-andheri.html" class="area-pill">📍 Andheri</a>
+      <a href="/chess-coach-jogeshwari.html" class="area-pill">📍 Jogeshwari</a>
+      <a href="/chess-coach-santacruz.html" class="area-pill">📍 Santacruz</a>
+      <a href="/chess-coach-bandra.html" class="area-pill">📍 Bandra</a>
+      <a href="/chess-coach-dadar.html" class="area-pill">📍 Dadar</a>
+      <a href="/chess-coach-dahisar.html" class="area-pill">📍 Dahisar</a>
+      <a href="/chess-coach-powai.html" class="area-pill">📍 Powai</a>
+      <a href="/chess-coach-mulund.html" class="area-pill">📍 Mulund</a>
+      <a href="/chess-coach-chembur.html" class="area-pill">📍 Chembur</a>
+      <a href="/chess-coach-thane.html" class="area-pill">📍 Thane</a>
+      <span class="area-pill" style="opacity:.6;cursor:default;">📍 Bangalore (Coming)</span>
+      <span class="area-pill" style="opacity:.6;cursor:default;">📍 Delhi (Coming)</span>
+      <span class="area-pill" style="opacity:.6;cursor:default;">📍 Chennai (Coming)</span>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="https://wa.me/918591028709?text=I+don%27t+see+my+area+listed%2C+can+you+help" class="btn btn-gold" target="_blank" rel="noopener noreferrer">📱 Don't see your area? WhatsApp us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>♟ ChessWithRahul Academy</h4>
+        <p>Mumbai's leading chess trainer marketplace. Verified coaches travel to your home across all Mumbai areas. Personally quality-checked by Rahul — Multiple Inter-College Chess Champion.</p>
+        <div class="footer-contacts">
+          <a href="https://wa.me/918591028709" target="_blank" rel="noopener noreferrer">📱 +91 8591028709 (WhatsApp)</a>
+          <a href="tel:+918591028709">📞 +91 8591028709</a>
+          <a href="mailto:contact@chesswithrahul.in">✉ contact@chesswithrahul.in</a>
+          <span>📍 Kandivali East, Mumbai 400101</span>
+        </div>
+        <div class="f-socials">
+          <a href="https://youtube.com/@chess_with-rahul-n1o" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://maps.app.goo.gl/oSJVjH3s3ME8Ffzw5" target="_blank" rel="noopener noreferrer">Google Maps</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="/kids-chess.html">Kids Chess Classes</a></li>
+          <li><a href="/beginner-chess.html">Beginner Coaching</a></li>
+          <li><a href="/adult-senior-chess.html">Adult Training</a></li>
+          <li><a href="/1200-elo-training.html">Rating Improvement</a></li>
+          <li><a href="/pricing.html">Pricing & Packages</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Trainers</h4>
+        <ul>
+          <li><a href="/trainers.html">All Trainers</a></li>
+          <li><a href="/become-a-trainer.html">Become a Trainer</a></li>
+          <li><a href="/chess-coach-kandivali.html">Kandivali Trainer</a></li>
+          <li><a href="/chess-coach-andheri.html">Andheri Trainer</a></li>
+          <li><a href="/chess-coach-borivali.html">Borivali Trainer</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Blog & Info</h4>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/testimonials.html">Reviews</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-btm-inner">
+        <p>© 2025 ChessWithRahul Academy. All rights reserved.</p>
+        <div class="f-legal">
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918591028709?text=Hi%2C%20I%20want%20to%20find%20a%20chess%20trainer%20near%20me" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Chess with Rahul Academy">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="/js/main.js"></script>
+<script>
+function filterTrainers(zone) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('#trainersGrid .trainer-card-v2').forEach(card => {
+    if (zone === 'all') { card.style.display = ''; return; }
+    const cardZone = card.dataset.zone || '';
+    const cardSpec = card.dataset.specialty || '';
+    const show = (zone === 'kids' || zone === 'competitive') 
+      ? cardSpec.includes(zone) 
+      : cardZone.includes(zone);
+    card.style.display = show ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

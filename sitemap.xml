@@ -1,38 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Pages -->
-  <url><loc>https://chesswithrahul.in/</loc><lastmod>2026-03-11</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://chesswithrahul.in/about.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://chesswithrahul.in/contact.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://chesswithrahul.in/testimonials.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://chesswithrahul.in/faq.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <!-- Program Pages -->
-  <url><loc>https://chesswithrahul.in/kids-chess.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://chesswithrahul.in/beginner-chess.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://chesswithrahul.in/adult-senior-chess.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://chesswithrahul.in/1200-elo-training.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <!-- Location Pages -->
-  <url><loc>https://chesswithrahul.in/chess-coach-kandivali.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-borivali.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-andheri.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-malad.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-goregaon.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-bandra.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-thane.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-dadar.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-chembur.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-powai.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-mulund.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-santacruz.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-jogeshwari.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://chesswithrahul.in/chess-coach-dahisar.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <!-- Blog -->
-  <url><loc>https://chesswithrahul.in/blog/</loc><lastmod>2026-03-11</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://chesswithrahul.in/blog/how-to-learn-chess-for-beginners-mumbai.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://chesswithrahul.in/blog/benefits-of-chess-for-kids-mumbai.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://chesswithrahul.in/blog/personal-chess-coach-vs-academy-mumbai.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <url><loc>https://chesswithrahul.in/blog/how-to-improve-chess-rating-fast.html</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
-  <!-- Legal -->
-  <url><loc>https://chesswithrahul.in/privacy-policy.html</loc><lastmod>2026-03-11</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://chesswithrahul.in/terms.html</loc><lastmod>2026-03-11</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- CORE -->
+  <url><loc>https://chesswithrahul.in/</loc><lastmod>2026-04-15</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://chesswithrahul.in/about.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chesswithrahul.in/contact.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chesswithrahul.in/testimonials.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chesswithrahul.in/faq.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- PROGRAMS -->
+  <url><loc>https://chesswithrahul.in/kids-chess.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chesswithrahul.in/beginner-chess.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chesswithrahul.in/adult-senior-chess.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chesswithrahul.in/1200-elo-training.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- MARKETPLACE (NEW) -->
+  <url><loc>https://chesswithrahul.in/trainers.html</loc><lastmod>2026-04-15</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://chesswithrahul.in/pricing.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chesswithrahul.in/become-a-trainer.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- TRAINER PROFILES (NEW) -->
+  <url><loc>https://chesswithrahul.in/trainers/rahul.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority><image:image><image:loc>https://chesswithrahul.in/images/trainers/rahul.webp</image:loc><image:title>Rahul — Lead Chess Trainer Kandivali Mumbai</image:title></image:image></url>
+  <url><loc>https://chesswithrahul.in/trainers/priya.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority><image:image><image:loc>https://chesswithrahul.in/images/trainers/priya.webp</image:loc><image:title>Priya Sharma — Kids Chess Trainer Andheri Mumbai</image:title></image:image></url>
+  <url><loc>https://chesswithrahul.in/trainers/arjun.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority><image:image><image:loc>https://chesswithrahul.in/images/trainers/arjun.webp</image:loc><image:title>Arjun Mehta — Competitive Chess Trainer Borivali Mumbai</image:title></image:image></url>
+  <url><loc>https://chesswithrahul.in/trainers/sneha.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority><image:image><image:loc>https://chesswithrahul.in/images/trainers/sneha.webp</image:loc><image:title>Sneha Patil — Home Chess Trainer Dadar Mumbai</image:title></image:image></url>
+  <url><loc>https://chesswithrahul.in/trainers/vikram.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority><image:image><image:loc>https://chesswithrahul.in/images/trainers/vikram.webp</image:loc><image:title>Vikram Nair — Home Chess Trainer Powai Mumbai</image:title></image:image></url>
+  <url><loc>https://chesswithrahul.in/trainers/riya.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority><image:image><image:loc>https://chesswithrahul.in/images/trainers/riya.webp</image:loc><image:title>Riya Desai — Home Chess Trainer Malad Mumbai</image:title></image:image></url>
+
+  <!-- LOCATION PAGES -->
+  <url><loc>https://chesswithrahul.in/chess-coach-kandivali.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-borivali.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-malad.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-goregaon.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-andheri.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-jogeshwari.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-santacruz.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-bandra.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-dadar.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-dahisar.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-powai.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-mulund.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-chembur.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://chesswithrahul.in/chess-coach-thane.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+
+  <!-- BLOG -->
+  <url><loc>https://chesswithrahul.in/blog/</loc><lastmod>2026-04-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chesswithrahul.in/blog/best-chess-classes-mumbai.html</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://chesswithrahul.in/blog/how-kids-can-learn-chess-fast.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://chesswithrahul.in/blog/benefits-of-chess-for-brain.html</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://chesswithrahul.in/blog/chess-classes-near-me-mumbai.html</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://chesswithrahul.in/blog/how-to-learn-chess-for-beginners-mumbai.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://chesswithrahul.in/blog/benefits-of-chess-for-kids-mumbai.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://chesswithrahul.in/blog/personal-chess-coach-vs-academy-mumbai.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://chesswithrahul.in/blog/how-to-improve-chess-rating-fast.html</loc><lastmod>2026-03-01</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+
+  <!-- LEGAL -->
+  <url><loc>https://chesswithrahul.in/privacy-policy.html</loc><lastmod>2026-01-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://chesswithrahul.in/terms.html</loc><lastmod>2026-01-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
 </urlset>
