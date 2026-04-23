@@ -352,6 +352,19 @@ footer{background:var(--gray-900);color:rgba(255,255,255,.82);}
   .trust-pill{font-size:.72rem;padding:.3rem .7rem;}
   .logo-name{font-size:1rem;}
   .compare-grid{grid-template-columns:1fr!important;}
+  /* Fix button overflow on small screens */
+  .btn{white-space:normal;word-break:break-word;}
+  .btn-lg{padding:.85rem 1.4rem;font-size:1rem;}
+  .btn-xl{padding:.9rem 1.6rem;font-size:1.05rem;}
+  .hero-proof{flex-wrap:wrap;gap:.5rem;}
+  .proof-badge{font-size:.78rem;padding:.4rem .85rem;}
+  /* Fix YouTube video overflow */
+  .video-showcase,.video-wrap,.video-ratio{max-width:100%;overflow:hidden;}
+  .video-ratio iframe{max-width:100%!important;width:100%!important;}
+  /* Prevent any section overflow */
+  section,.sec{overflow-x:hidden;}
+  /* Trainer card button wrap fix */
+  .trainer-card .btn{font-size:.76rem;padding:.5rem .4rem;}
 }
 
 /* ─── 25. TRAINER PROFILE PAGES ─── */
