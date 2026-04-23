@@ -59,9 +59,14 @@
     });
     panel.appendChild(list);
     var ctaBox=document.createElement('div');ctaBox.id='mmCta';
+    var becomeA=document.createElement('a');
+    becomeA.href='/become-a-trainer.html';
+    becomeA.style.cssText='display:block;width:100%;padding:13px 20px;background:rgba(255,255,255,.08);color:#fff;text-align:center;font-family:"DM Sans",sans-serif;font-size:15px;font-weight:700;text-decoration:none;border-radius:9999px;margin-bottom:10px;';
+    becomeA.textContent='🏫 Become a Trainer';
+    ctaBox.appendChild(becomeA);
     var ctaA=document.createElement('a');
     ctaA.href='https://wa.me/918591028709?text=Hi%20ChessWithRahul%20Academy%2C%20I%20want%20to%20book%20a%20free%20trial%20session';
-    ctaA.target='_blank';ctaA.rel='noopener noreferrer';ctaA.textContent='📱 Book FREE Trial';
+    ctaA.target='_blank';ctaA.rel='noopener noreferrer';ctaA.textContent='📱 Book Session';
     ctaBox.appendChild(ctaA);panel.appendChild(ctaBox);
     overlay.appendChild(panel);document.body.appendChild(overlay);
     function open(){overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');btn.setAttribute('aria-expanded','true');btn.classList.add('active');document.body.style.overflow='hidden';}
